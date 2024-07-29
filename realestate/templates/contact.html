@@ -1,0 +1,213 @@
+<style>
+    .contact-left{
+        padding-left: 5%;
+        padding-top: 5%;
+        width: 40%;
+        float: left;
+    }
+    .contact-right{
+      padding-left: 15%;
+        width: 40%;
+        float: left;
+    }
+    .contact-left p{
+        margin-top: 30px;
+
+    }
+    .contact-left i{
+        color: #ff004f;
+        margin-right: 15px;
+        font-size: 25px;
+    }
+    .social-icons{
+        margin-top: 30px;
+    }
+    .social-icons a{
+        text-decoration: none;
+        font-size: 30px;
+        margin-right: 15px;
+        color: #ababab;
+        display: inline-block;
+        transition: transform(0.5s);
+    }
+    .social-icons a:hover{
+        color:#ff004f;
+        transform: translate(-5px);
+    }
+
+</style>
+
+<div id="contact">
+  <div class="contact-left">
+    <h1 class="sub-title">Contact Us</h1>
+                <p><i class="fa-regular fa-envelope"></i><a style="text-decoration: none; color: white;" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new">SUVPROPERTIES@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone"></i>9971497473</p>
+                <p>Head Office:</p>
+                <p>SUV Properties (A Unit of New Mount Trading & Investment Co. Ltd.)<br><br> 33,Mirzapur Road, Prayagraj - 211010</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/vibhanshu.jaiswal.583"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/luckyjaiwal3832"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/vibhanshu-jaiswal-877151225/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+  </div>
+  <div class="contact-right">
+    <form class="conform">
+      <p class="title">Query Form </p>
+          <div class="flex">
+          <label>
+              <input class="input" type="text" placeholder="" required="">
+              <span>Firstname</span>
+          </label>
+  
+          <label>
+              <input class="input" type="text" placeholder="" required="">
+              <span>Lastname</span>
+          </label>
+          </div>
+      <label>
+          <input class="input" type="email" placeholder="" required="">
+          <span>Email</span>
+      </label>  
+      <label>
+          <textarea class="input" cols="30" rows="5" required placeholder="Your Query"></textarea>
+      </label>
+      <button class="submit">Submit</button>
+  </form>
+  </div>
+</div>
+    <style>
+      .conform {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+      border-radius: 20px;
+      color: #fff;
+    }
+
+    .title {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -1px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      color: #00bfff;
+    }
+
+    .title::before {
+      width: 18px;
+      height: 18px;
+    }
+
+    .title::after {
+      width: 18px;
+      height: 18px;
+      animation: pulse 1s linear infinite;
+    }
+
+    .title::before,
+    .title::after {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      left: 0px;
+      background-color: #00bfff;
+    }
+
+    .message, 
+    .signin {
+      font-size: 14.5px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .signin {
+      text-align: center;
+    }
+
+    .signin a:hover {
+      text-decoration: underline royalblue;
+    }
+
+    .signin a {
+      color: #00bfff;
+    }
+
+    .flex {
+      display: flex;
+      gap: 6px;
+    }
+
+    .conform label {
+      position: relative;
+    }
+
+    .conform label .input {
+      background-color: #333;
+      color: #fff;
+      width: 80%;
+      padding: 20px 05px 05px 10px;
+      outline: 0;
+      border: 1px solid rgba(105, 105, 105, 0.397);
+      border-radius: 10px;
+    }
+
+    .conform label .input + span {
+      color: rgba(255, 255, 255, 0.5);
+      position: absolute;
+      left: 10px;
+      top: 0px;
+      font-size: 0.9em;
+      cursor: text;
+      transition: 0.3s ease;
+    }
+
+    .conform label .input:placeholder-shown + span {
+      top: 12.5px;
+      font-size: 0.9em;
+    }
+
+    .conform label .input:focus + span,
+    .conform label .input:valid + span {
+      color: #00bfff;
+      top: 0px;
+      font-size: 0.7em;
+      font-weight: 600;
+    }
+
+    .input {
+      font-size: medium;
+    }
+
+    .submit {
+      border: none;
+      outline: none;
+      padding: 10px;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 16px;
+      transform: .3s ease;
+      background-color: #00bfff;
+    }
+
+    .submit:hover {
+      background-color: #00bfff96;
+    }
+
+    @keyframes pulse {
+      from {
+        transform: scale(0.9);
+        opacity: 1;
+      }
+
+      to {
+        transform: scale(1.8);
+        opacity: 0;
+      }
+    }
+    </style>
+
+    

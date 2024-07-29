@@ -1,0 +1,40 @@
+
+<section class="lr">
+    <div class="l">Hi! <br> This is <span class="purple">SUV Properties</span> <br>and We are passionate to provide <br> <span id="element"></span></div>
+    
+    <div class="r"><img src="" alt="Changing Image" id="changingImage" ></div>
+</section>
+<script>
+    const imageUrls = [
+        'static/img1.jpg',
+        'static/img3.jpg',
+        'static/img2.jpg',
+    ];
+    const imageElement = document.getElementById('changingImage');
+    var currentIndex = 0;
+    function changeImage() {
+        imageElement.src = imageUrls[currentIndex];
+        currentIndex = (currentIndex + 1) % imageUrls.length;
+    }
+    setInterval(changeImage, 1800);
+    changeImage();
+</script>
+
+<style>
+    .lr{
+        display: flex;
+    }
+    .l{
+        width: 30%;
+        font-size: 50px;
+        padding-left: 8%;
+        padding-top: 5%;
+    }
+    .r{
+        width: 70%;
+    }
+    img{
+        height: 620px;
+        width:1000px;
+    }
+</style>

@@ -1,0 +1,75 @@
+<title>SUV</title>
+<style>
+    #services{
+    margin:50px ;
+    padding: 40px 0;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background-color: rgb(114, 105, 105);
+    padding:40px ;
+    font-size:18px ;
+    font-weight:300 ;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s;
+    color:whitesmoke;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background-color: rgb(121, 11, 27);
+    transform: translate(-20px);
+}
+</style>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Our Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-layer-group"></i>
+                <h2>FLATS</h2>
+                <p>
+                    Flats are a type of residential property that consist of one or more rooms on a single floor of a building. Flats can vary in size, design, layout, and amenities, depending on the location, budget, and preference of the owner or tenant. Flats can be rented or owned, and can be part of a larger complex or a standalone structure. Flats are also known as apartments, units, or condos in different parts of the world.
+                </p>
+                <a href="flat">Tap to see more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-building-columns"></i>
+                <h2>FARM HOUSE</h2>
+                <p>
+                    A farm house is a type of property that is usually located in a rural or agricultural area, and is used for residential or recreational purposes. A farm house can be a simple or luxurious dwelling, depending on the owner’s preference and budget. A farm house can also be associated with a farm, where crops or animals are raised, or a hobby farm, where the owner engages in some farming activities for leisure or pleasure.
+                </p>
+                <a href="fh">Tap to see more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-landmark"></i>
+                <h2>PLOTS</h2>
+                <p>
+                    Plots are pieces of land that are used for various purposes, such as building, farming, or gardening. Plots can vary in size, shape, location, and price, depending on the demand and supply of the real estate market. Plots can be bought or sold by individuals, developers, or government agencies.
+                </p>
+                <a href="plot">Tap to see more</a>
+            </div>
+        </div>
+    </div>
+</div>

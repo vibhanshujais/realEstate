@@ -20,6 +20,9 @@ from realestate.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
-    path('login/', login),
+    path('login', login),
     path('register/', register),
+    path('dashboard',dashboard),
+    path('logout', logout),
+    
 ]

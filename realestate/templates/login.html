@@ -151,18 +151,19 @@
 </head>
 <body>
   <div class="register-form">
-    <form class="conform" action="dashboard" method="get">
+    <form class="conform" action="/dashboard" method="post">
+      {% csrf_token %}
       <p class="title">Login </p>
         <label>
-          <input class="input" type="email" placeholder="" required="">
+          <input class="input" type="email" placeholder="" required="" value="" name="email">
           <span>Email</span>
       </label>  
       <label>
-          <input class="input" type="password" placeholder="" required="">
+          <input class="input" type="password" placeholder="" required="" name="password">
           <span>Password</span>
       </label>
       <button class="submit">Login</button>
-      <p class="signin">Does not have account ? <a href="/register">Register</a> </p>
+      <p class="signin">Does not have account ? <a href="register">Register</a> </p>
   </form>
 </div>
 </body>

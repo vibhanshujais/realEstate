@@ -17,8 +17,12 @@ def login(request):
         email = request.POST.get('email')
         number = request.POST.get('contact')
         password = request.POST.get('password')
-        ob = user(name = name, email = email, number = number, password = password)
-        ob.save()
+        cpass = request.POST.get('cpassword')
+        if password==cpass:
+            ob = user(name = name, email = email, number = number, password = password)
+            ob.save()
+        else:
+            return redirect('register/')
         return render(request, 'login.html')
     except:
         return render(request, 'login.html')
@@ -56,3 +60,8 @@ def login_view(request):
     else:
         return render(request, 'login.html')
  """
+
+
+def flat(request):
+    value = cache.get('key')
+    return render(request, 'flat.html', {'key' : value})

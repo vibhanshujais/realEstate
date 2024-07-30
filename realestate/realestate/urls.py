@@ -24,5 +24,6 @@ urlpatterns = [
     path('register/', register),
     path('dashboard',dashboard),
     path('logout', logout),
+    path('flat', flat),
     
 ]

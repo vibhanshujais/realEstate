@@ -159,6 +159,40 @@
       }
     }
   </style>
+  <style>
+    .strength-meter {
+        display: none;
+        height: 10px;
+        width: 100%;
+        background-color: #e0e0e0;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
+    .strength-bar {
+        height: 100%;
+        width: 0;
+        background-color: red;
+        border-radius: 5px;
+    }
+
+    .strength-text {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    .match-status {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .match {
+        color: green;
+    }
+
+    .no-match {
+        color: red;
+    }
+</style>
 </head>
 <body>
   <div class="register-form">
@@ -186,17 +220,84 @@
         <span>Contact</span>
     </label>
       <label>
-          <input class="input" type="password" placeholder="" required="" name="password" id="pass1">
+          <input class="input" type="password" placeholder="" required="" name="password" id="pass1" oninput="checkPasswordStrength()">
           <span>Password</span>
       </label>
+      <div class="strength-meter">
+        <div id="strength-bar" class="strength-bar"></div>
+      </div>
+      <div id="strength-text" class="strength-text"></div>
       <label>
-          <input class="input" type="password" placeholder="" required="" id="pass2">
+          <input class="input" type="password" placeholder="" required="" id="pass2" oninput="checkPasswordMatch()">
           <span>Confirm password</span>
       </label>
+      <div id="match-status" class="match-status"></div>
       <button class="submit" onclick="check()">Register</button>
       <p class="signin">Already have an account ? <a href="/login">Log in</a> </p>
   </form>
 
 </div>
 </body>
+
+<script>
+
+  function checkPasswordStrength() {
+
+      const password = document.getElementById('pass1').value;
+      const strengthBar = document.getElementById('strength-bar');
+      const strengthText = document.getElementById('strength-text');
+      
+      let strength = 0;
+      
+      if (password.length >= 8) strength++;
+      if (password.match(/[a-z]/)) strength++;
+      if (password.match(/[A-Z]/)) strength++;
+      if (password.match(/[0-9]/)) strength++;
+      if (password.match(/[^a-zA-Z0-9]/)) strength++;
+      
+      switch (strength) {
+          case 0:
+          case 1:
+              strengthBar.style.width = '20%';
+              strengthBar.style.backgroundColor = 'red';
+              strengthText.textContent = 'Very Weak';
+              break;
+          case 2:
+              strengthBar.style.width = '40%';
+              strengthBar.style.backgroundColor = 'orange';
+              strengthText.textContent = 'Weak';
+              break;
+          case 3:
+              strengthBar.style.width = '60%';
+              strengthBar.style.backgroundColor = 'yellow';
+              strengthText.textContent = 'Medium';
+              break;
+          case 4:
+              strengthBar.style.width = '80%';
+              strengthBar.style.backgroundColor = 'blue';
+              strengthText.textContent = 'Strong';
+              break;
+          case 5:
+              strengthBar.style.width = '100%';
+              strengthBar.style.backgroundColor = 'green';
+              strengthText.textContent = 'Very Strong';
+              break;
+      }
+  }
+
+  function checkPasswordMatch() {
+      const password = document.getElementById('pass1').value;
+      const confirmPassword = document.getElementById('pass2').value;
+      const matchStatus = document.getElementById('match-status');
+      
+      if (password === confirmPassword) {
+          matchStatus.textContent = 'Password match';
+          matchStatus.className = 'match-status match';
+      } else {
+          matchStatus.textContent = 'Password do not match';
+          matchStatus.className = 'match-status no-match';
+      }
+  }
+</script>
+
 </html>

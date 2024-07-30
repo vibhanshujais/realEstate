@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUV</title>
-<style>
-  body{
-        background-color: #fffff9;
-  }
-  .header{
-    float: left;
-    font-size: 25px;
-    text-align: center;
-    padding-top: 25px;
-    padding-bottom: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-  }
-  .head{
-    float:left;
-    font-size: 25px;
-    text-align: center;
-    padding-top: 25px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUV</title>
+  <style>
+    body{
+          background-color: #fffff9;
+    }
+    .header{
+      float: left;
+      font-size: 25px;
+      text-align: center;
+      padding-top: 25px;
+      padding-bottom: 50px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+    }
+    .head{
+      float:left;
+      font-size: 25px;
+      text-align: center;
+      padding-top: 25px;
+    }
+  </style>
 </head>
 <body>
   <div style="height: 50px; width: 100%; font-size: 30px; margin: 50px; margin-top: 60px;">
@@ -42,16 +42,16 @@
     </div>
   </div>
   {% for i in key %}
-  <div style="height: 120px; margin: 50px 50px 50px 50px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); background-color: #ffffff;">
-    <div>
-      <div class="head" style="width:4%"> <a href="prop" style="text-decoration: none;">{{i.id}}</a> </div>
-      <div class="head" style="width: 12%;" >{{i.category}}</div>
-      <div class="head" style="width: 27%;">{{i.location}}</div>
-      <div class="head" style="width: 36%;">{{i.description}}</div>
-      <div class="head" style="width: 10%;">{{i.price}}</div>
-      <div class="head" style="width: 10%;">{{i.status}}</div>
+    <div style="height: 120px; margin: 50px 50px 50px 50px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); background-color: #ffffff;">
+      <div>
+        <div class="head" style="width:4%"> <a href="prop" style="text-decoration: none;">{{i.id}}</a> </div>
+        <div class="head" style="width: 12%;" >{{i.category}}</div>
+        <div class="head" style="width: 27%;">{{i.location}}</div>
+        <div class="head" style="width: 36%;">{{i.description}}</div>
+        <div class="head" style="width: 10%;">{{i.price}}</div>
+        <div class="head" style="width: 10%;">{{i.status}}</div>
+      </div>
     </div>
-  </div>
   {% endfor %}
 </body>
 </html>

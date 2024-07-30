@@ -40,19 +40,12 @@
         font-size: 18px;
         flex: auto;
     }
-   /*  nav ul li a:hover{
-       color: white;
-       font-size: 1.0rem;
-    } */
     .left img{
         margin-right: 20px;
         margin-top: 10px;
         height: 30px;
         width: 30px;
         flex: auto;
-    }
-    #nav-toggle{
-        display: none;
     }
     .contain:hover .logout{
         display: block;
@@ -66,8 +59,7 @@
         border-radius: 5px;
         text-decoration: none;  
     }
-
-    </style>
+</style>
 <div id="header">
     <div class="left"><img src="static/logo.jpg" alt="">SUV PROPERTIES</div>
     <div class="right">
@@ -88,10 +80,3 @@
         </ul>
     </nav>
 </div>
-<div id="nav-toggle">&#9776;</div>
-</div>
-<script>
-    document.getElementById('nav-toggle').addEventListener('click', function () {
-        document.getElementById('sidebar').classList.toggle('active');
-    });
-</script>

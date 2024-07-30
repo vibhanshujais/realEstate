@@ -4,14 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUV</title>
-
   <style>
     .register-form{
       width: 40%;
       margin: 2% 0 0 30%;
-    }
-    .login-form{
-      display: none;
     }
     .conform {
       display: flex;
@@ -23,7 +19,6 @@
       background-color: black;
       border: 5px solid #333;
     }
-
     .title {
       font-size: 28px;
       font-weight: 600;
@@ -147,22 +142,9 @@
         opacity: 0;
       }
     }
-  </style>
-  <style>
     .strength-meter {
         display: none;
-        height: 10px;
-        width: 100%;
-        background-color: #e0e0e0;
-        border-radius: 5px;
-        margin-top: 5px;
-    }
 
-    .strength-bar {
-        height: 100%;
-        width: 0;
-        background-color: red;
-        border-radius: 5px;
     }
 
     .strength-text {
@@ -189,31 +171,30 @@
       {% csrf_token %}
       <p class="title">Register </p>
       <p class="message">Signup now and get full access to our webapp. </p>
-          <div class="flex">
-          <label>
-              <input class="input" type="text" placeholder="" required="" name="firstname">
-              <span>Firstname</span>
-          </label>
-  
-          <label>
-              <input class="input" type="text" placeholder="" required="" name="lastname">
-              <span>Lastname</span>
-          </label>
-          </div>
+      <div class="flex">
+        <label>
+            <input class="input" type="text" placeholder="" required="" name="firstname">
+            <span>Firstname</span>
+        </label>
+        <label>
+            <input class="input" type="text" placeholder="" required="" name="lastname">
+            <span>Lastname</span>
+        </label>
+      </div>
       <label>
-          <input class="input" type="email" placeholder="" required="" name="email">
-          <span>Email</span>
+        <input class="input" type="email" placeholder="" required="" name="email">
+        <span>Email</span>
       </label>  
       <label>
-        <input class="input" type="number" placeholder="" required="" name="contact">
-        <span>Contact</span>
-    </label>
+          <input class="input" type="number" placeholder="" required="" name="contact">
+          <span>Contact</span>
+      </label>
       <label>
           <input class="input" type="password" placeholder="" required="" name="password" id="pass1" oninput="checkPasswordStrength()">
           <span>Password</span>
       </label>
       <div class="strength-meter">
-        <div id="strength-bar" class="strength-bar"></div>
+          <div id="strength-bar" class="strength-bar"></div>
       </div>
       <div id="strength-text" class="strength-text"></div>
       <label>
@@ -222,20 +203,17 @@
       </label>
       <div id="match-status" class="match-status"></div>
       <button class="submit" onclick="check()">Register</button>
-      <p class="signin">Already have an account ? <a href="/login">Log in</a> </p>
-  </form>
-
-</div>
+      <p class="signin">Already have an account ? <a href="/login">Log in</a></p>
+    </form>
+  </div>
 </body>
 
 <script>
-
   function checkPasswordStrength() {
-
       const password = document.getElementById('pass1').value;
       const strengthBar = document.getElementById('strength-bar');
       const strengthText = document.getElementById('strength-text');
-      
+    
       let strength = 0;
       
       if (password.length >= 8) strength++;
@@ -278,5 +256,4 @@
       }
   }
 </script>
-
 </html>

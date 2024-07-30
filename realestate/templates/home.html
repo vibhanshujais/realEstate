@@ -7,24 +7,24 @@
 </head>
 <body>
     {% include 'header.html' %}
-    <MAIN>
+    <main>
         {% include 'front.html' %}
         {% include 'service.html' %}
         {% include 'about.html' %}
         {% include 'contact.html' %}
         <hr>
-        <script>
-            var typed = new Typed('#element', {
-                strings: [
-                'FLATS','PLOTS','FARM HOUSES'],
-                typeSpeed: 90,
-                loop:true
-            });
-        </script>
-        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-        <script src="https://kit.fontawesome.com/c01199fbba.js" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    </MAIN>
+    </main>
     {% include 'footer.html' %}
+    <script>
+        var typed = new Typed('#element', {
+            strings: [
+            'FLATS','PLOTS','FARM HOUSES'],
+            typeSpeed: 90,
+            loop:true
+        });
+    </script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/c01199fbba.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </body>
 </html>

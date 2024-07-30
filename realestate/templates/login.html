@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUV</title>
-
   <style>
     .register-form{
       width: 40%;
@@ -154,7 +153,7 @@
     <form class="conform" action="/dashboard" method="post">
       {% csrf_token %}
       <p class="title">Login </p>
-        <label>
+      <label>
           <input class="input" type="email" placeholder="" required="" value="" name="email">
           <span>Email</span>
       </label>  
@@ -164,7 +163,7 @@
       </label>
       <button class="submit">Login</button>
       <p class="signin">Does not have account ? <a href="register">Register</a> </p>
-  </form>
-</div>
+    </form>
+  </div>
 </body>
 </html>

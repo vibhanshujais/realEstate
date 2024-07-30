@@ -8,8 +8,6 @@ def home(request):
     else:
         return render(request, 'home.html') """
     value = cache.get('key')
-    if value:
-        print(value)
     return render(request, 'home.html',{'key':value})
 
 

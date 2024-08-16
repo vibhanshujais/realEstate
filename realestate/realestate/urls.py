@@ -25,5 +25,7 @@ urlpatterns = [
     path('dashboard',dashboard),
     path('logout', logout),
     path('flat', flat),
+    path('farmhouse', fh),
+    path('plot', plot),
     
 ]

@@ -65,3 +65,11 @@ def login_view(request):
 def flat(request):
     value = cache.get('key')
     return render(request, 'flat.html', {'key' : value})
+
+def fh(request):
+    value = cache.get('key')
+    return render(request, 'fh.html', {'key':value})
+
+def plot(request):
+    value = cache.get('key')
+    return render(request, 'plot.html', {'key':value})

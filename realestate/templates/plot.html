@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLOTS SECTION</title>
+    <link rel="stylesheet" href="project1.css">
+    <style>
+        .container{
+    height: 700px;
+    border: 4px solid blue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(1, 30, 1);
+}
+.left-side{
+    flex-basis: 30%;
+    border: 4px solid blue;
+    border-radius: 20px;
+}
+
+#port{
+    margin :10px;
+    color: white;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#ab{
+    color:white;
+    font-size: 3rem;
+    margin-top: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.gallery{
+    flex-basis: 50%;
+    display: grid;
+    gap:5px;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 120px;
+}
+.box{
+    background-size: cover;
+    background-position: top;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    background-blend-mode: hard-light;
+    transition: all 1s ease-in-out;
+}
+.box:hover{
+  background-color: #999;
+  background-position: center;
+}
+.row-2{
+  grid-row: span 2;
+}
+.col-2{
+grid-column: span 2;
+}
+.header{
+    float: left;
+    margin: 0;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+  .head{
+    float:left;
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 50px;
+  }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <h2 id="port">Welcome to our PLOTS Section</h2>
+            <br><br><br><br><br><br>
+        </div>
+        <div class="gallery">
+            <div class="box row-2" style="background-image: url(/static/PLOT1.JPG.jpeg);">PLOT1</div>
+            <div class="box col-2" style="background-image: url(/static/PLOT2.JPG.jpeg);">PLOT2</div>
+            <div class="box" style="background-image: url(/static/PLOT3.JPG.jpeg);">PLOT3</div>
+            <div class="box row-2"style="background-image: url(/static/PLOT4.JPG.jpeg);">PLOT4</div>
+            <div class="box col-2 "style="background-image: url(/static/PLOT5.JPG.jpeg);">PLOT5</div>
+            <div class="box "style="background-image: url(/static/IMGFL6.JPG.jpeg);">hPLOT6</div>
+            <div class="box col-2 "style="background-image: url(https://th.bing.com/th/id/OIP.PWU1oNi87A6GlG_bPF8BPgHaDk?w=316&h=168&c=7&r=0&o=5&dpr=1.3&pid=1.7);">PLOT7</div>
+        </div>
+    </div>
+
+</body>
+</html>

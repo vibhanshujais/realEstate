@@ -1,6 +1,5 @@
 """
 URL configuration for realestate project.
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
 Examples:
@@ -21,11 +20,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
     path('login', login),
-    path('register/', register),
+    path('register', register),
     path('dashboard',dashboard),
     path('logout', logout),
     path('flat', flat),
     path('farmhouse', fh),
     path('plot', plot),
-    
+    path('userdashboard',userdashboard),
 ]

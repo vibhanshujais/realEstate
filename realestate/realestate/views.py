@@ -73,3 +73,6 @@ def fh(request):
 def plot(request):
     value = cache.get('key')
     return render(request, 'plot.html', {'key':value})
+
+def userdashboard(request):
+    return render(request, 'dashboard.html')

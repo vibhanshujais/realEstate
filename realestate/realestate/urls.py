@@ -27,4 +27,5 @@ urlpatterns = [
     path('farmhouse', fh),
     path('plot', plot),
     path('userdashboard',userdashboard),
+    path('query', querymodel),
 ]

@@ -185,24 +185,25 @@
     </div>
   </div>
   <div class="contact-right">
-    <form class="conform">
+    <form class="conform" action="query" method="post">
+      {% csrf_token %}
       <p class="title">Query Form </p>
         <div class="flex">
           <label>
-              <input class="input" type="text" placeholder="" required="">
+              <input class="input" type="text" placeholder="" required name="fn">
               <span>Firstname</span>
           </label>
           <label>
-              <input class="input" type="text" placeholder="" required="">
+              <input class="input" type="text" placeholder="" required name="ln">
               <span>Lastname</span>
           </label>
         </div>
       <label>
-          <input class="input" type="email" placeholder="" required="">
+          <input class="input" type="email" placeholder="" required name="email">
           <span>Email</span>
       </label>  
       <label>
-          <textarea class="input" cols="30" rows="5" required placeholder="Your Query"></textarea>
+          <textarea class="input" cols="30" rows="5" required placeholder="Your Query" name="description"></textarea>
       </label>
       <button class="submit">Submit</button>
     </form>

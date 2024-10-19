@@ -57,94 +57,43 @@
         .col-2{
             grid-column: span 2;
         }
-        #f1{
+        .flat{
+            margin-left: 25%;
             width: 49%;
             height: 492px;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
+            align-items: end;
+            font-size: 10px;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
-            background-image: url('static/IMGFL1.JPG.jpeg');
             background-size: contain;
+        }
+        #f1{            
+            background-image: url('static/IMGFL1.JPG.jpeg');
         }
         #f2{
-            width: 49%;
-            height: 492px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
             background-image: url('static/IMGFL2.JPG.jpeg');
-            background-size: contain;
         }
         #f3{
-            width: 49%;
-            height: 492px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
             background-image: url('static/IMGFL3.JPG.jpeg');
-            background-size: contain;
         }
         #f4{
-            width: 49%;
-            height: 492px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
             background-image: url('static/IMGFL4.JPG.jpeg');
-            background-size: contain;
         }
         #f5{
-            width: 49%;
-            height: 492px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
             background-image: url('static/IMGFL5.JPG.jpeg');
-            background-size: contain;
         }
         #f6{
-            width: 49%;
-            height: 492px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
             background-image: url('static/IMGFL6.JPG.jpeg');
-            background-size: contain;
+        }
+        #ab{
+            font-size: large;
         }
     </style>
 </head>
 <body>
-    {% include 'header.html' %}
     <div class="container">
         <div class="left-side">
             <h2 id="port">Welcome to our FLAT Section</h2>
@@ -161,38 +110,38 @@
     </div>
     <br><br><br><br>
     <a href="">
-        <div id="f1">
-            <h2 id="ab"></h2>
+        <div id="f1" class="flat">
+            <h3 id="ab">California</h3>
         </div>
     </a>
     <br><br><br><br>
     <a href="">
-        <div id="f2">
-            <h2 id="ab"></h2>
+        <div id="f2" class="flat">
+            <h2 id="ab">New York</h2>
         </div>
     </a>
     <br><br><br><br>
     <a href="">
-        <div id="f3">
-            <h2 id="ab"></h2>
+        <div id="f3" class="flat">
+            <h2 id="ab">Italy</h2>
         </div>
     </a>
     <br><br><br><br>
     <a href="">
-        <div id="f4">
-            <h2 id="ab"></h2>
+        <div id="f4" class="flat">
+            <h2 id="ab">France</h2>
         </div>
     </a>
     <br><br><br><br>
     <a href="">
-        <div id="f5">
-            <h2 id="ab"></h2>
+        <div id="f5" class="flat">
+            <h2 id="ab">Tokyo</h2>
         </div>
     </a>
     <br><br><br><br>
     <a href="">
-        <div id="f6">
-            <h2 id="ab"></h2>
+        <div id="f6" class="flat">
+            <h2 id="ab">Seoul</h2>
         </div>
     </a>
 </body>

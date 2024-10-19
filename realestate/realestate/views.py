@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render,redirect
 from django.core.cache import cache
-from realstates.models import user
+from realstates.models import user, query   
 def home(request):
     """ if request.user.is_authenticated:
         return render(request, 'home.html', {'name':request.user.email})
@@ -76,3 +76,11 @@ def plot(request):
 
 def userdashboard(request):
     return render(request, 'dashboard.html')
+
+def querymodel(request):
+    name = request.POST.get('fn') + request.POST.get('ln')
+    email = request.POST.get('email')
+    description = request.POST.get('description')
+    ob = query(name=name,email=email,description=description)
+    ob.save()
+    return redirect('/')

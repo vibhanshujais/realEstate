@@ -1,14 +1,14 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render,redirect
 from django.core.cache import cache
-from realstates.models import user, query   
+from realstates.models import user, query, property_booking_details
 def home(request):
     """ if request.user.is_authenticated:
         return render(request, 'home.html', {'name':request.user.email})
     else:
         return render(request, 'home.html') """
-    value = cache.get('key')
-    return render(request, 'home.html',{'key':value})
+    value = cache.get('name')
+    return render(request, 'home.html',{'name':value})
 
 
 def login(request):
@@ -38,12 +38,16 @@ def dashboard(request):
     data = {}
     for i in ob:
         data['name'] = i.name
+        data['email'] = i.email
+        data['no'] = i.number
     if data:
-        cache.set('key', data['name'])
+        cache.set('name', data['name'])
+        cache.set('email',data['email'])
+        cache.set('no',data['no'])
     return redirect('/')
 
 def logout(request):
-    cache.delete('key')
+    cache.delete('name')
     return redirect('/')
 
 """ 
@@ -75,7 +79,17 @@ def plot(request):
     return render(request, 'plot.html', {'key':value})
 
 def userdashboard(request):
-    return render(request, 'dashboard.html')
+    name = cache.get('name')
+    email =  cache.get('email')
+    ob = property_booking_details.objects.filter(user=name, email=email)
+    data = {}
+    for i in ob:
+        data['name'] = i.name
+        data['email'] = i.email
+        data['p_id'] = i.p_id
+        data['category'] = i.category
+        data['p_id'] = i.p_id
+    return render(request, 'dashboard.html',data)
 
 def querymodel(request):
     name = request.POST.get('fn') + request.POST.get('ln')
@@ -84,3 +98,19 @@ def querymodel(request):
     ob = query(name=name,email=email,description=description)
     ob.save()
     return redirect('/')
+
+def f1(request):
+    return render(request, 'f1.html')
+
+def fbook(request):
+    id = request.POST.get('id')
+    no = cache.get('no')
+    email = cache.get('email')
+    category = 'flat'
+    name = cache.get('name')
+    if name:
+        ob = property_booking_details(user=name,number=no,email=email,category=category,p_id=id)
+        ob.save()
+        return redirect('/flat')
+    else:
+        return redirect('/login')

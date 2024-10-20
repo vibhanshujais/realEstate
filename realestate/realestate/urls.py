@@ -28,4 +28,6 @@ urlpatterns = [
     path('plot', plot),
     path('userdashboard',userdashboard),
     path('query', querymodel),
+    path('f1',f1),
+    path('book',fbook),
 ]

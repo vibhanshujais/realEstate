@@ -41,13 +41,15 @@ def dashboard(request):
         data['email'] = i.email
         data['no'] = i.number
     if data:
-        cache.set('name', data['name'])
-        cache.set('email',data['email'])
-        cache.set('no',data['no'])
+        cache.set('name', data['name'], timeout=3600)
+        cache.set('email',data['email'], timeout=3600)
+        cache.set('no',data['no'], timeout=3600)
     return redirect('/')
 
 def logout(request):
     cache.delete('name')
+    cache.delete('email')
+    cache.delete('no')
     return redirect('/')
 
 """ 
@@ -67,29 +69,30 @@ def login_view(request):
 
 
 def flat(request):
-    value = cache.get('key')
-    return render(request, 'flat.html', {'key' : value})
+    value = cache.get('name')
+    return render(request, 'flat.html', {'name' : value})
 
 def fh(request):
-    value = cache.get('key')
-    return render(request, 'fh.html', {'key':value})
+    value = cache.get('name')
+    return render(request, 'fh.html', {'name':value})
 
 def plot(request):
-    value = cache.get('key')
-    return render(request, 'plot.html', {'key':value})
+    value = cache.get('name')
+    return render(request, 'plot.html', {'name':value})
 
 def userdashboard(request):
     name = cache.get('name')
     email =  cache.get('email')
     ob = property_booking_details.objects.filter(user=name, email=email)
-    data = {}
-    for i in ob:
-        data['name'] = i.name
-        data['email'] = i.email
-        data['p_id'] = i.p_id
-        data['category'] = i.category
-        data['p_id'] = i.p_id
-    return render(request, 'dashboard.html',data)
+    data={'key':ob}
+    print(ob)
+    l=[]
+    for i in data['key']:
+        if i not in l:
+            l.append((i))
+            
+    print(l)
+    return render(request, 'userdashboard.html',{'name':name,'email':email,'key':l})
 
 def querymodel(request):
     name = request.POST.get('fn') + request.POST.get('ln')
@@ -102,6 +105,8 @@ def querymodel(request):
 def f1(request):
     return render(request, 'f1.html')
 
+def f2(request):
+    return render(request, 'f2.html')
 def fbook(request):
     id = request.POST.get('id')
     no = cache.get('no')

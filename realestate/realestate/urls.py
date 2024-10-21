@@ -29,5 +29,6 @@ urlpatterns = [
     path('userdashboard',userdashboard),
     path('query', querymodel),
     path('f1',f1),
+    path('f2',f2),
     path('book',fbook),
 ]

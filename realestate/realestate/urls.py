@@ -30,5 +30,9 @@ urlpatterns = [
     path('query', querymodel),
     path('f1',f1),
     path('f2',f2),
+    path('f3',f3),
+    path('f4',f4),
+    path('f5',f5),
+    path('f6',f6),
     path('book',fbook),
 ]

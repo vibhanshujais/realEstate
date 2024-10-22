@@ -107,6 +107,19 @@ def f1(request):
 
 def f2(request):
     return render(request, 'f2.html')
+
+def f3(request):
+    return render(request, 'f3.html')
+
+def f4(request):
+    return render(request, 'f4.html')
+
+def f5(request):
+    return render(request, 'f5.html')
+
+def f6(request):
+    return render(request, 'f6.html')
+
 def fbook(request):
     id = request.POST.get('id')
     no = cache.get('no')

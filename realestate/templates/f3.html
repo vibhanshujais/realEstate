@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function booked(){
+            event.preventDefault();
+            if(confirm("Are you sure to book this flat?")){
+                document.getElementById('form').submit();
+            }else{
+                return false;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <img src="static/IMGFL3.JPG.JPEG" alt="">
+    <form action="book" id="form" method="post">
+        {% csrf_token %}
+        <input type="hidden" value="f3" name="id">
+        <button type="submit" onclick="return booked()">Book</button>
+    </form>
+</body>
+</html>

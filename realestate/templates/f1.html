@@ -9,7 +9,6 @@
             height: 300px;
             width: 30%;
             margin-left: 2em;
-            margin-bottom: 3em;
         }
         #id{
             display: flex;
@@ -18,11 +17,19 @@
             align-items: center;
             justify-items: center;
         }
+        button{
+            width: 100%;
+            background-color:blueviolet;
+            height: 50px;
+            cursor: pointer;
+            color: white;
+            font-size: x-large;
+        }
     </style>
     <script>
         function booked(){
             event.preventDefault();
-            if(confirm("Are you sure to book this flat?")){
+            if(confirm("Are you sure to add this property to your cart?")){
                 document.getElementById('form').submit();
             }else{
                 return false;
@@ -33,16 +40,17 @@
 </head>
 <body>
     <div id="images">
-        <a href="f1/image1"><img src="static/IMGFL1.JPG.JPEG" alt=""></a>
-        <img src="static/IMGFL2.JPG.JPEG" alt="">
-        <img src="static/IMGFL4.JPG.JPEG" alt="">
-        <img src="static/IMGFL5.JPG.JPEG" alt="">
-        <img src="static/IMGFL6.JPG.JPEG" alt="">
+        <a href="static/IMGFL1.JPG.JPEG"><img src="static/IMGFL1.JPG.JPEG" alt=""></a>
+        <a href="static/IMGFL2.JPG.JPEG"><img src="static/IMGFL2.JPG.JPEG" alt=""></a>
+        <a href="static/IMGFL3.JPG.JPEG"><img src="static/IMGFL3.JPG.JPEG" alt=""></a>
+        <a href="static/IMGFL4.JPG.JPEG"><img src="static/IMGFL4.JPG.JPEG" alt=""></a>
+        <a href="static/IMGFL5.JPG.JPEG"><img src="static/IMGFL5.JPG.JPEG" alt=""></a>
+        <a href="static/IMGFL6.JPG.JPEG"><img src="static/IMGFL6.JPG.JPEG" alt=""></a>
     </div>
     <form action="book" id="form" method="post">
         {% csrf_token %}
         <input type="hidden" value="f1" name="id">
-        <button type="submit" onclick="return booked()">Book</button>
+        <button type="submit" onclick="return booked()">Add this to your Cart</button>
     </form>
 </body>
 </html>

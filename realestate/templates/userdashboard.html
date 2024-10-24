@@ -10,6 +10,9 @@
             font-size: 25px;
             text-decoration: underline;
         }
+        td{
+            width: 100px;
+        }
     </style>
 </head>
 <body>
@@ -23,13 +26,25 @@
    <div style="font-family: 'Courier New', Courier, monospace;">
        <center>
         <h1><u>Your History</u></h1>
-        <b><h3>Id</h3>   &nbsp; &nbsp;  &nbsp;<h3>Category</h3> </b><br>
-        {% for i in key %}
-        <b>  
-            {{i.p_id}}   &nbsp; &nbsp; &nbsp;
-            {{i.category}}
-        </b> <br>
-        {% endfor %}
+        <b>
+            <table>
+                <tr>
+                    <td><u>Id</u></td>
+                    <td><u>Category</u></td>
+                </tr>
+            </table>
+        </b>
+        <table>
+            {% for i in key %}
+                <b>
+                <tr>
+                    <td>{{i.p_id}}</td>
+                    <td>{{i.category}}</td>
+                </tr>
+                </b> <br>
+            {% endfor %}
+        </table>
+        
        </center>
    </div>
 </body>

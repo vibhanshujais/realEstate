@@ -34,5 +34,6 @@ urlpatterns = [
     path('f4',f4),
     path('f5',f5),
     path('f6',f6),
+    path('f1/image1',f1_image1),    
     path('book',fbook),
 ]

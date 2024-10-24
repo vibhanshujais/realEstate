@@ -104,7 +104,8 @@ def querymodel(request):
 
 def f1(request):
     return render(request, 'f1.html')
-
+def f1_image1(request):
+    return render(request,'f1_image1.html')
 def f2(request):
     return render(request, 'f2.html')
 

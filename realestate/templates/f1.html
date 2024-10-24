@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        img{
+            height: 300px;
+            width: 30%;
+            margin-left: 2em;
+            margin-bottom: 3em;
+        }
+        #id{
+            display: flex;
+            justify-content:space-between;
+            align-content: space-between;
+            align-items: center;
+            justify-items: center;
+        }
+    </style>
     <script>
         function booked(){
             event.preventDefault();
@@ -17,7 +32,13 @@
     </script>
 </head>
 <body>
-    <img src="static/IMGFL1.JPG.JPEG" alt="">
+    <div id="images">
+        <a href="f1/image1"><img src="static/IMGFL1.JPG.JPEG" alt=""></a>
+        <img src="static/IMGFL2.JPG.JPEG" alt="">
+        <img src="static/IMGFL4.JPG.JPEG" alt="">
+        <img src="static/IMGFL5.JPG.JPEG" alt="">
+        <img src="static/IMGFL6.JPG.JPEG" alt="">
+    </div>
     <form action="book" id="form" method="post">
         {% csrf_token %}
         <input type="hidden" value="f1" name="id">

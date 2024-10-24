@@ -83,3 +83,8 @@
 #ab{
     font-size: large;
 }
+#next-button{
+    background-color: white;
+    border-color: red;
+    cursor: pointer;
+}

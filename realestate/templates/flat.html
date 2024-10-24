@@ -6,8 +6,38 @@
     <title>FLAT SECTION</title>
     <link rel="stylesheet" href="static/project1.css">
     <link rel="stylesheet" href="static/flat.css">
+    <style>
+        div{
+            margin-bottom: 2vw;
+        }
+        .image{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+        }
+        img{
+            object-fit: cover;
+            height: 500px;
+            width: 100%;
+        }
+        .prev{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: xx-large;
+            cursor: pointer;
+        }
+        .next{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: xx-large;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
         <div class="left-side">
             <h2 id="port">Welcome to our FLAT Section</h2>
@@ -19,10 +49,65 @@
             <div class="box row-2"style="background-image: url(/static/IMGFL5.JPG.jpeg);">FLAT4</div>
             <div class="box col-2 "style="background-image: url(/static/IMGFL4.JPG.jpeg);">FLAT5</div>
             <div class="box "style="background-image: url(/static/IMGFL6.JPG.jpeg);">FLAT6</div>
-            <div class="box col-2 "style="background-image: url(https://th.bing.com/th?id=OIP.l3ZBUiwYCIucnlN3PnYxMQHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2);">PLOT7</div>
+            <div class="box col-2 "style="background-image: url(https://th.bing.com/th?id=OIP.l3ZBUiwYCIucnlN3PnYxMQHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2);">FLAT7</div>
         </div>
     </div>
     <br><br><br><br>
+    
+
+    <div class="image" style="height: 500px;">
+        <div style="width: 30%; height: 500px;" id="prev-button1" class="prev"> &larr; </div>
+        <div style="width: 70%; height: 500px; position: relative;">
+            <a href="f1"><img src="static/IMGFL1.JPG.jpeg" alt="" id="slideshow-image1"></a>
+            <div id="overlay" style="position: absolute; top: 3%; left: 2%; color: white; background-color: rgba(0,0,0,0.7);">California</div>
+        </div>
+        <div style="width: 30%; height: 500px;" id="next-button1" class="next"> &rarr; </div>
+    </div>
+    <div class="image" style="height: 500px; position: relative;">
+        <div style="width: 30%; height: 500px;" id="prev-button2" class="prev"> &larr; </div>
+        <div style="width: 70%; height: 500px;">
+            <a href="f2"><img src="static/IMGFL2.JPG.jpeg" alt="" id="slideshow-image2"></a>
+            <div id="overlay" style="position: absolute; top: 2%; left: 24%; color: white; background-color: rgba(0,0,0,0.7);">New York</div>
+        </div>
+        <div style="width: 30%; height: 500px;" id="next-button2" class="next"> &rarr; </div>
+    </div>
+    <div class="image" style="height: 500px; position: relative;">
+        <div style="width: 30%; height: 500px;" id="prev-button3" class="prev"> &larr; </div>
+        <div style="width: 70%; height: 500px;"><a href="f3"><img src="static/IMGFL3.JPG.jpeg" alt="" id="slideshow-image3"></a>
+            <div id="overlay" style="position: absolute; top: 2%; left: 24%; color: white; background-color: rgba(0,0,0,0.7);">Seoul</div>
+        </div>
+        <div style="width: 30%; height: 500px;" id="next-button3" class="next"> &rarr; </div>
+    </div>
+    <div class="image" style="height: 500px; position: relative;">
+        <div style="width: 30%; height: 500px;" id="prev-button4" class="prev"> &larr; </div>
+        <div style="width: 70%; height: 500px;"><a href="f4"><img src="static/IMGFL4.JPG.jpeg" alt="" id="slideshow-image4"></a>
+            <div id="overlay" style="position: absolute; top: 2%; left: 24%; color: white; background-color: rgba(0,0,0,0.7);">Bangluru</div>
+        </div>
+        <div style="width: 30%; height: 500px;" id="next-button4" class="next"> &rarr; </div>
+    </div>
+    <div class="image" style="height: 500px; position: relative;">
+        <div style="width: 30%; height: 500px;" id="prev-button5" class="prev"> &larr; </div>
+        <div style="width: 70%; height: 500px;"><a href="f5"><img src="static/IMGFL5.JPG.jpeg" alt="" id="slideshow-image5"></a>
+            <div id="overlay" style="position: absolute; top: 2%; left: 24%; color: white; background-color: rgba(0,0,0,0.7);">Noida</div>
+        </div>
+        <div style="width: 30%; height: 500px;" id="next-button5" class="next"> &rarr; </div>
+    </div>
+    <div class="image" style="height: 500px; position: relative;">
+        <div style="width: 30%; height: 500px;" id="prev-button6" class="prev"> &larr; </div>
+        <div style="width: 70%; height: 500px;"><a href="f6"><img src="static/IMGFL6.JPG.jpeg" alt="" id="slideshow-image6"></a>
+            <div id="overlay" style="position: absolute; top: 2%; left: 24%; color: white; background-color: rgba(0,0,0,0.7);">Hyderabad</div>
+        </div>
+        <div style="width: 30%; height: 500px;" id="next-button6" class="next"> &rarr; </div>
+    </div>
+
+
+<!-- 
+    
+
+    <button id="prev-button">&larr;</button>
+    <a href=""><img src="static/IMGFL1.JPG.jpeg" alt="" id="slideshow-image" style="width: 300px; height: 200px;"></a>
+    <button id="next-button">&rarr;</button>
+
     <a href="f1">
         <div id="f1" class="flat">
             <h3 id="ab">California</h3>
@@ -58,5 +143,8 @@
             <h2 id="ab">Seoul</h2>
         </div>
     </a>
+
+ -->
+    <script src="static/flat.js"></script>
 </body>
 </html>

@@ -3,15 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLOTS SECTION</title>
-    <link rel="stylesheet" href="static/project1.css">
+    <title>Farm house SECTION</title>
+    <link rel="stylesheet" href="static/project1.css"> 
     <link rel="stylesheet" href="static/plot.css">
+    <style>
+        div{
+            margin-bottom: 2vw;
+        }
+        .image{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+        }
+        img{
+            object-fit: cover;
+            height: 500px;
+            width: 100%;
+        }
+        .prev{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: xx-large;
+            cursor: pointer;
+        }
+        .next{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: xx-large;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="left-side">
-            <h2 id="port">Welcome to our PLOTS Section</h2>
-            <br><br><br><br><br><br>
+            <h2 id="port">Welcome to our PLOT Section</h2>
         </div>
         <div class="gallery">
             <div class="box row-2" style="background-image: url(/static/PLOT1.JPG.jpeg);">PLOT1</div>
@@ -19,39 +47,83 @@
             <div class="box" style="background-image: url(/static/PLOT3.JPG.jpeg);">PLOT3</div>
             <div class="box row-2"style="background-image: url(/static/PLOT4.JPG.jpeg);">PLOT4</div>
             <div class="box col-2 "style="background-image: url(/static/PLOT5.JPG.jpeg);">PLOT5</div>
-            <div class="box "style="background-image: url(/static/IMGFL6.JPG.jpeg);">hPLOT6</div>
-            <div class="box col-2 "style="background-image: url(https://th.bing.com/th/id/OIP.PWU1oNi87A6GlG_bPF8BPgHaDk?w=316&h=168&c=7&r=0&o=5&dpr=1.3&pid=1.7);">PLOT7</div>
+            <div class="box "style="background-image: url(/static/PLOT2.JPG.jpeg);">PLOT6</div>
+            <div class="box col-2 "style="background-image: url(https://th.bing.com/th/id/OIP.JCpiGUb-k90Xf-kOEs2lnQHaE6?w=296&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7);">PLOT7</div>
         </div>
+    </div><br><br><br><br>
+    
+
+    <div class="image" style="height: 500px;">
+        <div style="width: 30%; height: 500px;" id="prev-button1" class="prev"> &larr; </div>
+        <div style="width: 70%; height: 500px; position: relative;">
+            <a href="plot1"><img src="static/PLOT1.JPG.jpeg" alt="" id="slideshow-image1"></a>
+            <div id="overlay" style="position: absolute; top: 3%; left: 2%; color: white; background-color: rgba(0,0,0,0.7);">California</div>
+        </div>
+        <div style="width: 30%; height: 500px;" id="next-button1" class="next"> &rarr; </div>
     </div>
-    <br><br><br><br>
+    <div class="image" style="height: 500px; position: relative;">
+        <div style="width: 30%; height: 500px;" id="prev-button2" class="prev"> &larr; </div>
+        <div style="width: 70%; height: 500px;">
+            <a href="plot2"><img src="static/PLOT2.JPG.jpeg" alt="" id="slideshow-image2"></a>
+            <div id="overlay" style="position: absolute; top: 2%; left: 24%; color: white; background-color: rgba(0,0,0,0.7);">New York</div>
+        </div>
+        <div style="width: 30%; height: 500px;" id="next-button2" class="next"> &rarr; </div>
+    </div>
+    <div class="image" style="height: 500px; position: relative;">
+        <div style="width: 30%; height: 500px;" id="prev-button3" class="prev"> &larr; </div>
+        <div style="width: 70%; height: 500px;"><a href="plot3"><img src="static/PLOT3.JPG.jpeg" alt="" id="slideshow-image3"></a>
+            <div id="overlay" style="position: absolute; top: 2%; left: 24%; color: white; background-color: rgba(0,0,0,0.7);">Seoul</div>
+        </div>
+        <div style="width: 30%; height: 500px;" id="next-button3" class="next"> &rarr; </div>
+    </div>
+    <div class="image" style="height: 500px; position: relative;">
+        <div style="width: 30%; height: 500px;" id="prev-button4" class="prev"> &larr; </div>
+        <div style="width: 70%; height: 500px;"><a href="plot4"><img src="static/PLOT4.JPG.jpeg" alt="" id="slideshow-image4"></a>
+            <div id="overlay" style="position: absolute; top: 2%; left: 24%; color: white; background-color: rgba(0,0,0,0.7);">Bangluru</div>
+        </div>
+        <div style="width: 30%; height: 500px;" id="next-button4" class="next"> &rarr; </div>
+    </div>
+    <div class="image" style="height: 500px; position: relative;">
+        <div style="width: 30%; height: 500px;" id="prev-button5" class="prev"> &larr; </div>
+        <div style="width: 70%; height: 500px;"><a href="plot5"><img src="static/PLOT5.JPG.jpeg" alt="" id="slideshow-image5"></a>
+            <div id="overlay" style="position: absolute; top: 2%; left: 24%; color: white; background-color: rgba(0,0,0,0.7);">Noida</div>
+        </div>
+        <div style="width: 30%; height: 500px;" id="next-button5" class="next"> &rarr; </div>
+    </div>
+
+
+
+   <!--  <br><br><br><br>
     <a href="">
-        <div id="p1" class="plot">
+        <div id="fh1" class="fh">
             <h2 id="ab"></h2>
         </div>
     </a>
     <br><br><br><br>
     <a href="">
-        <div id="p2" class="plot">
+        <div id="fh2" class="fh">
             <h2 id="ab"></h2>
         </div>
     </a>
     <br><br><br><br>
     <a href="">
-        <div id="p3" class="plot">
+        <div id="fh3" class="fh">
             <h2 id="ab"></h2>
         </div>
     </a>
     <br><br><br><br>
     <a href="">
-        <div id="p4" class="plot">
+        <div id="fh4" class="fh">
             <h2 id="ab"></h2>
         </div>
     </a>
     <br><br><br><br>
     <a href="">
-        <div id="p5" class="plot">
+        <div id="fh5" class="fh">
             <h2 id="ab"></h2>
         </div>
-    </a>
+    </a> -->
+
+    <script src="static/plot.js"></script>
 </body>
 </html>

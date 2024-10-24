@@ -86,18 +86,3 @@ grid-column: span 2;
     transition: all 0.3s ease-in-out;
     background-size: contain;
 }
-#fh1{
-    background-image: url('static/FH1.JPG.jpeg');
-}
-#fh2{
-    background-image: url('static/FH2.JPG.jpeg');
-}
-#fh3{
-    background-image: url('static/FH3.JPG.jpeg');
-}
-#fh4{
-    background-image: url('static/FH4.JPG.jpeg');
-}
-#fh5{
-    background-image: url('static/FH5.JPG.jpeg');
-}

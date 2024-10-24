@@ -44,5 +44,7 @@ urlpatterns = [
     path('plot3',plot3),
     path('plot4',plot4),
     path('plot5',plot5),
-    path('book',fbook),
+    path('fbook',fbook),
+    path('fhbook',fhbook),
+    path('plotbook',plotbook),
 ]

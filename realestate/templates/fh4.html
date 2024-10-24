@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 300px;
+            width: 30%;
+            margin-left: 2em;
+            margin-bottom: 3em;
+        }
+        #id{
+            display: flex;
+            justify-content:space-between;
+            align-content: space-between;
+            align-items: center;
+            justify-items: center;
+        }
+        button{
+            width: 100%;
+            background-color:blueviolet;
+            height: 50px;
+            cursor: pointer;
+            color: white;
+            font-size: x-large;
+        }
+    </style>
+    <script>
+        function booked(){
+            event.preventDefault();
+            if(confirm("Are you sure to book this flat?")){
+                document.getElementById('form').submit();
+            }else{
+                return false;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="images">
+        <a href="static/FH4.JPG.JPEG"><img src="static/FH4.JPG.JPEG" alt=""></a>
+        <a href="static/FH2.JPG.JPEG"><img src="static/FH2.JPG.JPEG" alt=""></a>
+        <a href="static/FH3.JPG.JPEG"><img src="static/FH3.JPG.JPEG" alt=""></a>
+        <a href="static/FH1.JPG.JPEG"><img src="static/FH1.JPG.JPEG" alt=""></a>
+        <a href="static/FH5.JPG.JPEG"><img src="static/FH5.JPG.JPEG" alt=""></a>
+    </div>
+    <form action="fhbook" id="form" method="post">
+        {% csrf_token %}
+        <input type="hidden" value="fh4" name="id">
+        <button type="submit" onclick="return booked()">Book</button>
+    </form>
+</body>
+</html>

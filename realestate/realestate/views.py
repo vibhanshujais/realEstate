@@ -163,3 +163,30 @@ def fbook(request):
         return redirect('/flat')
     else:
         return redirect('/login')
+    
+def fhbook(request):
+    id = request.POST.get('id')
+    no = cache.get('no')
+    email = cache.get('email')
+    category = 'farm house'
+    name = cache.get('name')
+    if name:
+        ob = property_booking_details(user=name,number=no,email=email,category=category,p_id=id)
+        ob.save()
+        return redirect('/farmhouse')
+    else:
+        return redirect('/login')
+    
+
+def plotbook(request):
+    id = request.POST.get('id')
+    no = cache.get('no')
+    email = cache.get('email')
+    category = 'plot'
+    name = cache.get('name')
+    if name:
+        ob = property_booking_details(user=name,number=no,email=email,category=category,p_id=id)
+        ob.save()
+        return redirect('/plot')
+    else:
+        return redirect('/login')

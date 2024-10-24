@@ -18,6 +18,14 @@
             align-items: center;
             justify-items: center;
         }
+        button{
+            width: 100%;
+            background-color:blueviolet;
+            height: 50px;
+            cursor: pointer;
+            color: white;
+            font-size: x-large;
+        }
     </style>
     <script>
         function booked(){
@@ -33,13 +41,14 @@
 </head>
 <body>
     <div id="images">
-        <a href="f3/image3"><img src="static/IMGFL3.JPG.JPEG" alt=""></a>
-        <img src="static/IMGFL2.JPG.JPEG" alt="">
-        <img src="static/IMGFL1.JPG.JPEG" alt="">
-        <img src="static/IMGFL5.JPG.JPEG" alt="">
-        <img src="static/IMGFL6.JPG.JPEG" alt="">
+        <a href="static/IMGFL3.JPG.JPEG"><img src="static/IMGFL3.JPG.JPEG" alt=""></a>
+        <a href="static/IMGFL2.JPG.JPEG"><img src="static/IMGFL2.JPG.JPEG" alt=""></a>
+        <a href="static/IMGFL1.JPG.JPEG"><img src="static/IMGFL1.JPG.JPEG" alt=""></a>
+        <a href="static/IMGFL4.JPG.JPEG"><img src="static/IMGFL4.JPG.JPEG" alt=""></a>
+        <a href="static/IMGFL5.JPG.JPEG"><img src="static/IMGFL5.JPG.JPEG" alt=""></a>
+        <a href="static/IMGFL6.JPG.JPEG"><img src="static/IMGFL6.JPG.JPEG" alt=""></a>
     </div>
-    <form action="book" id="form" method="post">
+    <form action="fbook" id="form" method="post">
         {% csrf_token %}
         <input type="hidden" value="f3" name="id">
         <button type="submit" onclick="return booked()">Book</button>

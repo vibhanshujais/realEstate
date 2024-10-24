@@ -8,6 +8,16 @@
     </div>
     <div class="r"><img src="" alt="Changing Image" id="changingImage" ></div>
 </section>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    const words = ['FLATS','PLOTS','FARM HOUSES'];
+    let i=0;
+    setInterval(() => {
+        document.getElementById('element').textContent = words[i % words.length];
+        i++;
+    }, 1600);
+    
+</script>
 <script>
     const imageUrls = [
         'static/img1.jpg',
@@ -23,19 +33,19 @@
     setInterval(changeImage, 1800);
     changeImage();
 </script>
-<script>
+<!-- <script>
     var typed = new Typed('#element', {
         strings: ['FLATS','PLOTS','FARM HOUSES'],
         typeSpeed: 90,
         loop:true
     });
-</script>
+</script> -->
 
 
 
 <style>
     #element{
-        color: purple;
+        color: blue;
     }
     .lr{
         display: flex;

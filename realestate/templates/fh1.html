@@ -18,6 +18,14 @@
             align-items: center;
             justify-items: center;
         }
+        button{
+            width: 100%;
+            background-color:blueviolet;
+            height: 50px;
+            cursor: pointer;
+            color: white;
+            font-size: x-large;
+        }
     </style>
     <script>
         function booked(){
@@ -33,13 +41,13 @@
 </head>
 <body>
     <div id="images">
-        <a href="fh1/image1"><img src="static/FH1.JPG.JPEG" alt=""></a>
-        <img src="static/FH2.JPG.JPEG" alt="">
-        <img src="static/FH4.JPG.JPEG" alt="">
-        <img src="static/Fh5.JPG.JPEG" alt="">
-        <img src="static/Fh3.JPG.JPEG" alt="">
+        <a href="static/FH1.JPG.JPEG"><img src="static/FH1.JPG.JPEG" alt=""></a>
+        <a href="static/FH2.JPG.JPEG"><img src="static/FH2.JPG.JPEG" alt=""></a>
+        <a href="static/FH3.JPG.JPEG"><img src="static/FH3.JPG.JPEG" alt=""></a>
+        <a href="static/FH4.JPG.JPEG"><img src="static/FH4.JPG.JPEG" alt=""></a>
+        <a href="static/FH5.JPG.JPEG"><img src="static/FH5.JPG.JPEG" alt=""></a>
     </div>
-    <form action="book" id="form" method="post">
+    <form action="fhbook" id="form" method="post">
         {% csrf_token %}
         <input type="hidden" value="fh1" name="id">
         <button type="submit" onclick="return booked()">Book</button>

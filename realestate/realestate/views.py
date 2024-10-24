@@ -121,6 +121,36 @@ def f5(request):
 def f6(request):
     return render(request, 'f6.html')
 
+def fh1(request):
+    return render(request, 'fh1.html')
+
+def fh2(request):
+    return render(request, 'fh2.html')
+
+def fh3(request):
+    return render(request, 'fh3.html')
+
+def fh4(request):
+    return render(request, 'fh4.html')
+
+def fh5(request):
+    return render(request, 'fh5.html')
+
+def plot1(request):
+    return render(request, 'plot1.html')
+
+def plot2(request):
+    return render(request, 'plot2.html')
+
+def plot3(request):
+    return render(request, 'plot3.html')
+
+def plot4(request):
+    return render(request, 'plot4.html')
+
+def plot5(request):
+    return render(request, 'plot5.html')
+
 def fbook(request):
     id = request.POST.get('id')
     no = cache.get('no')

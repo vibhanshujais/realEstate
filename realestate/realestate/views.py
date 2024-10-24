@@ -83,6 +83,7 @@ def plot(request):
 def userdashboard(request):
     name = cache.get('name')
     email =  cache.get('email')
+    no = cache.get('no')
     ob = property_booking_details.objects.filter(user=name, email=email)
     data={'key':ob}
     print(ob)
@@ -90,9 +91,7 @@ def userdashboard(request):
     for i in data['key']:
         if i not in l:
             l.append((i))
-            
-    print(l)
-    return render(request, 'userdashboard.html',{'name':name,'email':email,'key':l})
+    return render(request, 'userdashboard.html',{'name':name,'email':email,'no':no,'key':l})
 
 def querymodel(request):
     name = request.POST.get('fn') + request.POST.get('ln')

@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h3{
+            display: inline;
+            font-size: 25px;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    {{name}} <br>
-    {{email}} <br>
-    <h3>History</h3>
-    <b>Id  Category </b><br>
-    {% for i in key %}
-
-
-    {{i.p_id}} 
-    {{i.category}} <br>
-    {% endfor %}
+    <div style="display: flex; flex-direction: row-reverse;">
+        <b style="font-size: xx-large;">
+            {{name}} <br>
+            {{email}} <br>
+            {{no}} <br>
+        </b>
+    </div>
+   <div style="font-family: 'Courier New', Courier, monospace;">
+       <center>
+        <h1><u>Your History</u></h1>
+        <b><h3>Id</h3>   &nbsp; &nbsp;  &nbsp;<h3>Category</h3> </b><br>
+        {% for i in key %}
+        <b>  
+            {{i.p_id}}   &nbsp; &nbsp; &nbsp;
+            {{i.category}}
+        </b> <br>
+        {% endfor %}
+       </center>
+   </div>
 </body>
 </html>
